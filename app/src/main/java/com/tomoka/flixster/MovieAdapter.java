@@ -33,6 +33,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     // context for rendering
     Context context;
 
+    public final static String placeholder = "https://api.themoviesdb.org/3";
+
     // initialize with list
     public MovieAdapter(ArrayList<Movie> movies) {
         this.movies = movies;
@@ -126,6 +128,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
                 // serialize the movie using parceler, use its short name as a key
                 intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+                intent.putExtra(placeholder, config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath()));
                 // show the activity
                 context.startActivity(intent);
             }

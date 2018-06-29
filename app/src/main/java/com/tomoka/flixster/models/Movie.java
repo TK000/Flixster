@@ -15,7 +15,7 @@ public class Movie {
     String releaseDate;
 
     // integer id field for retrieving videos from youtube API
-    //int movieId;
+    int movieId;
 
     public Movie() {}
 
@@ -27,7 +27,7 @@ public class Movie {
         backdropPath = object.getString("backdrop_path");
         voteAverage = object.getDouble("vote_average");
         releaseDate = object.getString("release_date");
-        //movieId = object.getInt("id");
+        movieId = object.getInt("id");
     }
 
     public String getTitle() {
@@ -54,7 +54,7 @@ public class Movie {
         return releaseDate;
     }
 
-    //public int getMovieId() {
-        //return movieId;
-    //}
+    public int getMovieId() {
+        return movieId;
+    }
 }

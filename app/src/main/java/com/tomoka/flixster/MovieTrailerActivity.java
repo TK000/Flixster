@@ -1,5 +1,4 @@
 package com.tomoka.flixster;
-
 import android.os.Bundle;
 import android.util.Log;
 
@@ -7,6 +6,8 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+
+import static com.tomoka.flixster.MovieDetailsActivity.place;
 
 public class MovieTrailerActivity extends YouTubeBaseActivity {
 
@@ -16,7 +17,11 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         setContentView(R.layout.activity_movie_trailer);
 
         // temporary test video id -- TODO replace with movie trailer video id
-        final String videoId = "tKodtNFpzBA";
+        //final String videoId = "tKodtNFpzBA";
+        //Intent intent = getIntent();
+        //final String videoId = intent.getExtras().getString(placeholder);
+        final String videoId = getIntent().getStringExtra(place);
+        //Log.i("MovieTrailerActivity", videoId);
 
         // resolve the player view from the layout
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
@@ -38,4 +43,6 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
             }
         });
     }
+
+
 }
