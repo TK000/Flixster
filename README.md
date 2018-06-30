@@ -38,6 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+- figuring out how to use intents to pass info in the youtube feature was challenging
 
 ## Open-source libraries used
 
