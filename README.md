@@ -26,6 +26,7 @@ The following **additional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
 - back button leading back to current movies page from the movie details page
+- included release date to movie details page
 
 ## Video Walkthrough
 
