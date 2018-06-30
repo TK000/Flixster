@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="0dp"
     android:background="@color/backgroundColor"
+    tools:context=".MovieDetailsActivity">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="0dp"
     tools:context=".MovieDetailsActivity">
 
     <TextView
@@ -64,16 +72,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/tvOverview"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="5dp"
         android:onClick="onBack"
         android:text="Back" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/btnBack"
+        android:layout_below="@+id/tvOverview"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
         android:onClick="onPlay"
+        android:scaleType="centerInside"
         app:srcCompat="@drawable/flicks_backdrop_placeholder" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="217dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/imageView"
+        android:paddingBottom="60dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="60dp"
+        app:srcCompat="@android:drawable/ic_media_play" />
 </RelativeLayout>
+</ScrollView>
